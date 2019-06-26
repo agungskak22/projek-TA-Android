@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.projekta">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!--this is deprecated permission-->
+    <!--but this permission is required to allow receive push notification on android below Lollipop-->
+    <uses-permission
+        android:name="android.permission.GET_TASKS"
+        android:maxSdkVersion="19" />
+
+    <application
+        android:name="com.app.projekta.activities.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppMaterialTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.app.projekta.activities.ActivitySplash"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.app.projekta.activities.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.app.projekta.activities.ActivityDetailChannel"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.app.projekta.activities.ActivityOneSignalDetail"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.app.projekta.activities.ActivityFCMDetail"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.app.projekta.activities.ActivityDetailCategory"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.app.projekta.activities.ActivitySearch"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.app.projekta.activities.ActivityStreamPlayer"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.app.projekta.activities.ActivityRtmpPlayer"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.app.projekta.activities.ActivityYoutubePlayer"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.app.projekta.activities.ActivityPrivacyPolicy"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <service android:name="com.app.projekta.fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.app.projekta.fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.app.projekta.utils.NotificationExtenderExample"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.onesignal.NotificationExtender" />
+            </intent-filter>
+        </service>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+    </application>
+
+</manifest>

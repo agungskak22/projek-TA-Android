@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "546819234886",
+    "firebase_url": "https://projek-pak-ta.firebaseio.com",
+    "project_id": "projek-pak-ta",
+    "storage_bucket": "projek-pak-ta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546819234886:android:4d01f65f7d0cfe98",
+        "android_client_info": {
+          "package_name": "com.app.projekta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546819234886-r8rk3q9usu3ps1vqdbqlds854p3102p4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHxMMzLbHNTYgMvkmmNLcqH7j8Sm6jIhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546819234886-r8rk3q9usu3ps1vqdbqlds854p3102p4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
